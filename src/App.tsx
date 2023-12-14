@@ -1,9 +1,9 @@
-import Text from './pages/index'
+import Test from './pages/fetch/index'
 
 function App() {
   return (
     <>
-      <Text />
+      <Test />
     </>
   )
 }
