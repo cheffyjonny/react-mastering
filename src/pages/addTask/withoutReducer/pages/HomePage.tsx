@@ -1,9 +1,8 @@
 import { useState } from 'react'
+import { type TTask, type ErrorMsg } from '@/utils/dataStructure'
 
 import TaskList from '../components/TaskList'
 import AddTask from '../components/AddTask'
-
-import { type TTask, type ErrorMsg } from '@/utils/dataStructure'
 
 let nextId = 1
 
