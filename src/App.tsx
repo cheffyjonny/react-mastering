@@ -1,4 +1,6 @@
-import Test from './pages/useRef/index2'
+// import Test from './pages/addTask/withoutReducer/pages/HomePage'
+import Test from './pages/addTask/useReducer/pages/HomePage'
+// import Test from './pages/useReducer/index'
 
 function App() {
   return (

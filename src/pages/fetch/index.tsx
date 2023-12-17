@@ -54,7 +54,11 @@ export default function Demo() {
       {!isLoading && (
         <ul>
           {posts.map((post) => {
-            return <li key={post.id}>{post.title}</li>
+            return (
+              <li key={post.id}>
+                {post.id} - {post.title}
+              </li>
+            )
           })}
         </ul>
       )}
