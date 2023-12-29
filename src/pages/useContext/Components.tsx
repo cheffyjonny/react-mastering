@@ -1,14 +1,16 @@
-import { useUserContext } from './context'
+import { useContext } from 'react'
+import { DashboardContext, useUserContext } from './context'
 
 interface SidebarProps {}
 
 export function Sidebar({}: SidebarProps) {
-  const user = useUserContext()
+  const [user, setUser] = useContext(DashboardContext)
 
   return (
     <div>
       <div>{user.name}</div>
       <div>Subscription Status: {user.isSubscribed}</div>
+      <button onClick={() => {}}></button>
     </div>
   )
 }

@@ -1,5 +1,7 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
 import { useState } from 'react'
-import './Task.css'
 import { type TTask } from '@/utils/dataStructure'
 
 type TaskProps = {
@@ -36,7 +38,7 @@ const Task = ({ task, onChange, onDelete }: TaskProps) => {
     )
   }
   return (
-    <li>
+    <li css={li}>
       <input
         type='checkbox'
         checked={task.isDone}
@@ -49,6 +51,7 @@ const Task = ({ task, onChange, onDelete }: TaskProps) => {
       />
       {taskContent}
       <button
+        css={button}
         onClick={() => {
           onDelete(task.id)
         }}
@@ -59,4 +62,13 @@ const Task = ({ task, onChange, onDelete }: TaskProps) => {
   )
 }
 
+const button = css`
+  height: 3vh;
+`
+const li = css`
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+`
 export default Task

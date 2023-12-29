@@ -11,14 +11,14 @@ export interface User {
 interface DemoProps {}
 
 export default function Demo({}: DemoProps) {
-  const [user] = useState<User>({
+  const [user, setUser] = useState<User>({
     isSubscribed: true,
     name: 'You',
   })
 
   return (
     <div>
-      <DashboardContext.Provider value={user}>
+      <DashboardContext.Provider value={[user, setUser]}>
         <Dashboard />
       </DashboardContext.Provider>
     </div>

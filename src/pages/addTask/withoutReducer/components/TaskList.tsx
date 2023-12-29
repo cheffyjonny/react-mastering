@@ -1,6 +1,7 @@
-import { type TTask } from '@/utils/dataStructure'
-import './TaskList.css'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 
+import { type TTask } from '@/utils/dataStructure'
 import Task from './Task'
 
 type TaskListProps = {
@@ -11,7 +12,7 @@ type TaskListProps = {
 
 const TaskList = ({ tasks, onChangeTask, onDelete }: TaskListProps) => {
   return (
-    <ul>
+    <ul css={ul}>
       {tasks.map((task) => (
         <Task
           onChange={onChangeTask}
@@ -23,5 +24,10 @@ const TaskList = ({ tasks, onChangeTask, onDelete }: TaskListProps) => {
     </ul>
   )
 }
+
+const ul = css`
+  list-style: none;
+  padding: 0;
+`
 
 export default TaskList
