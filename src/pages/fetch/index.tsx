@@ -9,7 +9,7 @@ interface Post {
 
 export default function Demo() {
   const [error, setError] = useState()
-  const [isLoading, setIsloading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [posts, setPosts] = useState<Post[]>([])
   const [page, setPage] = useState(0)
 
@@ -19,7 +19,7 @@ export default function Demo() {
     const fetchPosts = async () => {
       abortControllerRef.current?.abort()
       abortControllerRef.current = new AbortController()
-      setIsloading(true)
+      setIsLoading(true)
 
       try {
         const response = await fetch(`${BASE_URL}/posts?page=${page}`, {
@@ -35,7 +35,7 @@ export default function Demo() {
         }
         setError(e)
       } finally {
-        setIsloading(false)
+        setIsLoading(false)
       }
     }
 
