@@ -6,7 +6,8 @@
 // import Test from './pages/useEffect/index'
 // import Test from './pages/useMemo/index'
 // import Test from './pages/keysAndLists/index'
-import Test from './pages/useLayoutEffect/index'
+// import Test from './pages/useLayoutEffect/index'
+import Test from './pages/useQuery/Demo'
 
 function App() {
   return (
